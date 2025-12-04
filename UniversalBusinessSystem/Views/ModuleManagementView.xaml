@@ -1,0 +1,355 @@
+ <UserControl x:Class="UniversalBusinessSystem.Views.ModuleManagementView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:vm="clr-namespace:UniversalBusinessSystem.ViewModels"
+             Background="{DynamicResource MaterialDesignPaper}">
+    
+    <!-- DataContext is resolved from the application's service provider in code-behind to allow DI. -->
+    
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <StackPanel Margin="20" Spacing="20">
+            <!-- Header -->
+            <materialDesign:Card Padding="24">
+                <StackPanel>
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Spacing="12">
+                        <materialDesign:PackIcon Kind="Puzzle" Width="36" Height="36"/>
+                        <StackPanel>
+                            <TextBlock Text="Module Management" FontSize="26" FontWeight="SemiBold"/>
+                            <TextBlock Text="Enable, disable, and organise the modules available to your organisation." FontSize="13" Opacity="0.75"/>
+                        </StackPanel>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0,20,0,0" Spacing="12">
+                        <Border Background="{DynamicResource PrimaryHueLightBrush}" Padding="10,4" CornerRadius="6" Opacity="0.9" RenderTransformOrigin="0.5,0.5">
+                            <Border.RenderTransform>
+                                <ScaleTransform/>
+                            </Border.RenderTransform>
+                            <Border.Triggers>
+                                <EventTrigger RoutedEvent="Binding.TargetUpdated">
+                                    <BeginStoryboard>
+                                        <Storyboard>
+                                            <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleX" To="1.15" Duration="0:0:0.18" AutoReverse="True"/>
+                                            <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleY" To="1.15" Duration="0:0:0.18" AutoReverse="True"/>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                </EventTrigger>
+                            </Border.Triggers>
+                            <StackPanel Orientation="Horizontal" Spacing="6">
+                                <materialDesign:PackIcon Kind="CheckCircle" Width="16" Height="16"/>
+                                <TextBlock Text="Active Modules:" FontWeight="SemiBold"/>
+                                <TextBlock Text="{Binding ActiveModules.Count, RelativeSource={RelativeSource AncestorType=UserControl}, NotifyOnTargetUpdated=True}"/>
+                            </StackPanel>
+                        </Border>
+                        <Border Background="{DynamicResource PrimaryHueLightBrush}" Padding="10,4" CornerRadius="6" Opacity="0.9" RenderTransformOrigin="0.5,0.5">
+                            <Border.RenderTransform>
+                                <ScaleTransform/>
+                            </Border.RenderTransform>
+                            <Border.Triggers>
+                                <EventTrigger RoutedEvent="Binding.TargetUpdated">
+                                    <BeginStoryboard>
+                                        <Storyboard>
+                                            <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleX" To="1.15" Duration="0:0:0.18" AutoReverse="True"/>
+                                            <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleY" To="1.15" Duration="0:0:0.18" AutoReverse="True"/>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                </EventTrigger>
+                            </Border.Triggers>
+                            <StackPanel Orientation="Horizontal" Spacing="6">
+                                <materialDesign:PackIcon Kind="PuzzlePlus" Width="16" Height="16"/>
+                                <TextBlock Text="Available Modules:" FontWeight="SemiBold"/>
+                                <TextBlock Text="{Binding AvailableModules.Count, RelativeSource={RelativeSource AncestorType=UserControl}, NotifyOnTargetUpdated=True}"/>
+                            </StackPanel>
+                        </Border>
+                    </StackPanel>
+                </StackPanel>
+            </materialDesign:Card>
+
+            <!-- Content Area -->
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="25"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <!-- Available Modules -->
+                <materialDesign:Card Grid.Column="0" Padding="20" Margin="0">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+
+                        <TextBlock Grid.Row="0" Text="Available Modules" FontSize="20" FontWeight="SemiBold"/>
+
+                        <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0,16,0,20" Spacing="12">
+                            <TextBox Width="220"
+                                     materialDesign:HintAssist.Hint="Search modules"
+                                     Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                                     materialDesign:TextFieldAssist.HasClearButton="True"
+                                     Text="{Binding SearchText, UpdateSourceTrigger=PropertyChanged}"/>
+                            <ComboBox Width="180"
+                                      ItemsSource="{Binding ModuleTypeFilters}"
+                                      SelectedItem="{Binding SelectedAvailableModuleTypeFilter}"
+                                      DisplayMemberPath="DisplayName"
+                                      Style="{StaticResource MaterialDesignOutlinedComboBox}"/>
+                            <ComboBox Width="180"
+                                      ItemsSource="{Binding SortOptions}"
+                                      SelectedItem="{Binding SelectedSortOption}"
+                                      DisplayMemberPath="DisplayName"
+                                      Style="{StaticResource MaterialDesignOutlinedComboBox}"/>
+                        </StackPanel>
+
+                        <Border Grid.Row="2" BorderBrush="{DynamicResource MaterialDesignDivider}" BorderThickness="1" CornerRadius="8">
+                            <ListBox ItemsSource="{Binding AvailableModules}"
+                                     SelectedItem="{Binding SelectedAvailableModule}"
+                                     Background="Transparent"
+                                     BorderThickness="0"
+                                     ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                                     VirtualizingPanel.IsVirtualizing="True"
+                                     VirtualizingPanel.ScrollUnit="Pixel"
+                                     VirtualizingPanel.VirtualizationMode="Recycling">
+                                <ListBox.ItemsPanel>
+                                    <ItemsPanelTemplate>
+                                        <VirtualizingStackPanel/>
+                                    </ItemsPanelTemplate>
+                                </ListBox.ItemsPanel>
+                                <ListBox.ItemContainerStyle>
+                                    <Style TargetType="ListBoxItem" BasedOn="{StaticResource {x:Type ListBoxItem}}">
+                                        <Setter Property="Margin" Value="6"/>
+                                        <Setter Property="Padding" Value="0"/>
+                                        <Setter Property="MinWidth" Value="300"/>
+                                        <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+                                        <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+                                        <Setter Property="Background" Value="Transparent"/>
+                                        <Setter Property="materialDesign:RippleAssist.IsCentered" Value="False"/>
+                                        <Setter Property="materialDesign:RippleAssist.IsEnabled" Value="False"/>
+                                        <Setter Property="ContextMenu">
+                                            <Setter.Value>
+                                                <ContextMenu>
+                                                    <MenuItem Header="Activate" Icon="✔" Command="{Binding DataContext.ActivateModuleCommand, RelativeSource={RelativeSource AncestorType=UserControl}}" CommandParameter="{Binding}"/>
+                                                </ContextMenu>
+                                            </Setter.Value>
+                                        </Setter>
+                                    </Style>
+                                </ListBox.ItemContainerStyle>
+                                <ListBox.ItemTemplate>
+                                    <DataTemplate>
+                                        <Border Padding="14" Background="{DynamicResource MaterialDesignPaper}" CornerRadius="10" BorderBrush="{DynamicResource MaterialDesignDivider}" BorderThickness="1">
+                                            <StackPanel Spacing="6">
+                                                <StackPanel Orientation="Horizontal" Spacing="8" VerticalAlignment="Center">
+                                                    <materialDesign:PackIcon Kind="{Binding Icon}" Width="20" Height="20" Foreground="{DynamicResource PrimaryHueMidBrush}"/>
+                                                    <TextBlock Text="{Binding Name}" FontWeight="SemiBold" FontSize="15"/>
+                                                </StackPanel>
+                                                <TextBlock Text="{Binding Description}" TextWrapping="Wrap" Opacity="0.75"/>
+                                                <StackPanel Orientation="Horizontal" Spacing="6" Opacity="0.6" FontSize="11">
+                                                    <materialDesign:PackIcon Kind="Tag" Width="12" Height="12"/>
+                                                    <TextBlock Text="{Binding ModuleType}"/>
+                                                    <TextBlock Text="•"/>
+                                                    <TextBlock Text="{Binding Key}"/>
+                                                </StackPanel>
+                                                <StackPanel Orientation="Horizontal" Spacing="8">
+                                                    <Button Content="Activate"
+                                                            Width="90"
+                                                            Padding="10,4"
+                                                            Style="{StaticResource MaterialDesignOutlinedButton}"
+                                                            Command="{Binding DataContext.ActivateModuleCommand, RelativeSource={RelativeSource AncestorType=UserControl}}"
+                                                            CommandParameter="{Binding}"/>
+                                                </StackPanel>
+                                            </StackPanel>
+                                        </Border>
+                                    </DataTemplate>
+                                </ListBox.ItemTemplate>
+                                <ListBox.Style>
+                                    <Style TargetType="ListBox">
+                                        <Setter Property="Template">
+                                            <Setter.Value>
+                                                <ControlTemplate TargetType="ListBox">
+                                                    <Border Background="Transparent">
+                                                        <ItemsPresenter/>
+                                                    </Border>
+                                                </ControlTemplate>
+                                            </Setter.Value>
+                                        </Setter>
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding AvailableModules.Count}" Value="0">
+                                                <Setter Property="Template">
+                                                    <Setter.Value>
+                                                        <ControlTemplate TargetType="ListBox">
+                                                            <Border Padding="40">
+                                                                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Spacing="12">
+                                                                    <materialDesign:PackIcon Kind="PuzzleRemove" Width="48" Height="48" Opacity="0.3"/>
+                                                                    <TextBlock Text="All modules currently active" FontSize="16" FontWeight="SemiBold" HorizontalAlignment="Center"/>
+                                                                    <TextBlock Text="Modules you deactivate will appear here." Opacity="0.65" HorizontalAlignment="Center"/>
+                                                                </StackPanel>
+                                                            </Border>
+                                                        </ControlTemplate>
+                                                    </Setter.Value>
+                                                </Setter>
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </ListBox.Style>
+                            </ListBox>
+                        </Border>
+
+                        <TextBlock Grid.Row="3" Text="Select a module to activate it for this organisation." Opacity="0.65" Margin="2,14,0,0" FontSize="12"/>
+                    </Grid>
+                </materialDesign:Card>
+
+                <!-- Active Modules -->
+                <materialDesign:Card Grid.Column="2" Padding="20">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+
+                        <TextBlock Grid.Row="0" Text="Active Modules" FontSize="20" FontWeight="SemiBold"/>
+
+                        <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0,16,0,20" Spacing="12">
+                            <ComboBox Width="200"
+                                      ItemsSource="{Binding ModuleTypeFilters}"
+                                      SelectedItem="{Binding SelectedActiveModuleTypeFilter}"
+                                      DisplayMemberPath="DisplayName"
+                                      Style="{StaticResource MaterialDesignOutlinedComboBox}"/>
+                        </StackPanel>
+
+                        <Border Grid.Row="2" BorderBrush="{DynamicResource MaterialDesignDivider}" BorderThickness="1" CornerRadius="8">
+                            <ListBox ItemsSource="{Binding ActiveModules}"
+                                     SelectedItem="{Binding SelectedActiveModule}"
+                                     Background="Transparent"
+                                     BorderThickness="0"
+                                     ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                                     VirtualizingPanel.IsVirtualizing="True"
+                                     VirtualizingPanel.ScrollUnit="Pixel"
+                                     VirtualizingPanel.VirtualizationMode="Recycling">
+                                <ListBox.ItemsPanel>
+                                    <ItemsPanelTemplate>
+                                        <VirtualizingStackPanel/>
+                                    </ItemsPanelTemplate>
+                                </ListBox.ItemsPanel>
+                                <ListBox.ItemContainerStyle>
+                                    <Style TargetType="ListBoxItem" BasedOn="{StaticResource {x:Type ListBoxItem}}">
+                                        <Setter Property="Margin" Value="6"/>
+                                        <Setter Property="Padding" Value="0"/>
+                                        <Setter Property="MinWidth" Value="300"/>
+                                        <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+                                        <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+                                        <Setter Property="Background" Value="Transparent"/>
+                                        <Setter Property="materialDesign:RippleAssist.IsCentered" Value="False"/>
+                                        <Setter Property="materialDesign:RippleAssist.IsEnabled" Value="False"/>
+                                        <Setter Property="ContextMenu">
+                                            <Setter.Value>
+                                                <ContextMenu>
+                                                    <MenuItem Header="Deactivate" Icon="✖" Command="{Binding DataContext.DeactivateModuleWithParameterCommand, RelativeSource={RelativeSource AncestorType=UserControl}}" CommandParameter="{Binding}"/>
+                                                </ContextMenu>
+                                            </Setter.Value>
+                                        </Setter>
+                                    </Style>
+                                </ListBox.ItemContainerStyle>
+                                <ListBox.ItemTemplate>
+                                    <DataTemplate>
+                                        <Border Padding="14" Background="{DynamicResource MaterialDesignPaper}" CornerRadius="10" BorderBrush="{DynamicResource PrimaryHueLightBrush}" BorderThickness="1">
+                                            <StackPanel Spacing="6">
+                                                <StackPanel Orientation="Horizontal" Spacing="8" VerticalAlignment="Center">
+                                                    <materialDesign:PackIcon Kind="{Binding Icon}" Width="20" Height="20" Foreground="{DynamicResource PrimaryHueMidBrush}"/>
+                                                    <TextBlock Text="{Binding Name}" FontWeight="SemiBold" FontSize="15"/>
+                                                    <materialDesign:PackIcon Kind="CheckCircle" Width="18" Height="18" Foreground="{DynamicResource PrimaryHueMidBrush}"/>
+                                                </StackPanel>
+                                                <TextBlock Text="{Binding Description}" TextWrapping="Wrap" Opacity="0.75"/>
+                                                <StackPanel Orientation="Horizontal" Spacing="6" Opacity="0.6" FontSize="11">
+                                                    <materialDesign:PackIcon Kind="Tag" Width="12" Height="12"/>
+                                                    <TextBlock Text="{Binding ModuleType}"/>
+                                                    <TextBlock Text="•"/>
+                                                    <TextBlock Text="{Binding Key}"/>
+                                                </StackPanel>
+                                                <StackPanel Orientation="Horizontal" Spacing="8">
+                                                    <Button Content="Deactivate"
+                                                            Width="100"
+                                                            Padding="10,4"
+                                                            Style="{StaticResource MaterialDesignOutlinedButton}"
+                                                            Command="{Binding DataContext.DeactivateModuleWithParameterCommand, RelativeSource={RelativeSource AncestorType=UserControl}}"
+                                                            CommandParameter="{Binding}"/>
+                                                </StackPanel>
+                                            </StackPanel>
+                                        </Border>
+                                    </DataTemplate>
+                                </ListBox.ItemTemplate>
+                                <ListBox.Style>
+                                    <Style TargetType="ListBox">
+                                        <Setter Property="Template">
+                                            <Setter.Value>
+                                                <ControlTemplate TargetType="ListBox">
+                                                    <Border Background="Transparent">
+                                                        <ItemsPresenter/>
+                                                    </Border>
+                                                </ControlTemplate>
+                                            </Setter.Value>
+                                        </Setter>
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding ActiveModules.Count}" Value="0">
+                                                <Setter Property="Template">
+                                                    <Setter.Value>
+                                                        <ControlTemplate TargetType="ListBox">
+                                                            <Border Padding="40">
+                                                                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Spacing="12">
+                                                                    <materialDesign:PackIcon Kind="PuzzleOutline" Width="48" Height="48" Opacity="0.3"/>
+                                                                    <TextBlock Text="No modules enabled" FontSize="16" FontWeight="SemiBold" HorizontalAlignment="Center"/>
+                                                                    <TextBlock Text="Activate modules on the left to see them here." Opacity="0.65" HorizontalAlignment="Center"/>
+                                                                </StackPanel>
+                                                            </Border>
+                                                        </ControlTemplate>
+                                                    </Setter.Value>
+                                                </Setter>
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </ListBox.Style>
+                            </ListBox>
+                        </Border>
+
+                        <StackPanel Grid.Row="3" Orientation="Horizontal" Spacing="12" Margin="0,16,0,0">
+                            <Button Content="Deactivate Module"
+                                    Padding="12,6"
+                                    Style="{StaticResource MaterialDesignOutlinedButton}"
+                                    Command="{Binding DeactivateModuleCommand}"
+                                    CommandParameter="{Binding SelectedActiveModule}"
+                                    IsEnabled="{Binding SelectedActiveModule, Converter={StaticResource NullToBooleanConverter}}"/>
+                            <Button Content="Refresh"
+                                    Padding="12,6"
+                                    Style="{StaticResource MaterialDesignFlatButton}"
+                                    Command="{Binding RefreshCommand}"/>
+                        </StackPanel>
+                    </Grid>
+                </materialDesign:Card>
+            </Grid>
+
+            <!-- Module Summaries -->
+            <materialDesign:Card Padding="20" Visibility="{Binding ModuleSummaries.Count, Converter={StaticResource NullToBooleanConverter}}">
+                <StackPanel>
+                    <TextBlock Text="Active Module Overview" FontSize="20" FontWeight="SemiBold" Margin="0,0,0,16"/>
+                    <ItemsControl ItemsSource="{Binding ModuleSummaries}" Margin="0,0,0,8">
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <Border BorderBrush="{DynamicResource MaterialDesignDivider}" BorderThickness="0,0,0,1" Padding="12,8">
+                                    <StackPanel Orientation="Horizontal" Spacing="12">
+                                        <materialDesign:PackIcon Kind="{Binding Icon}" Width="22" Height="22"/>
+                                        <StackPanel>
+                                            <TextBlock Text="{Binding Name}" FontWeight="SemiBold"/>
+                                            <TextBlock Text="{Binding Description}" FontSize="12" Opacity="0.7"/>
+                                        </StackPanel>
+                                    </StackPanel>
+                                </Border>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+                </StackPanel>
+            </materialDesign:Card>
+        </StackPanel>
+    </ScrollViewer>
+</UserControl>

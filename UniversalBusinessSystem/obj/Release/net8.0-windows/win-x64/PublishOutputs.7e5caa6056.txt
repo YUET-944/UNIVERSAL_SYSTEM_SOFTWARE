@@ -1,0 +1,2 @@
+F:\PROJECT MANAGEMET\UNIVERSALSOFTWARE\UNIVERSAL_SOFTWARE_3.0\UniversalBusinessSystem\bin\Release\net8.0-windows\publish-singlefile\UniversalBusinessSystem.pdb
+F:\PROJECT MANAGEMET\UNIVERSALSOFTWARE\UNIVERSAL_SOFTWARE_3.0\UniversalBusinessSystem\bin\Release\net8.0-windows\publish-singlefile\UniversalBusinessSystem.exe

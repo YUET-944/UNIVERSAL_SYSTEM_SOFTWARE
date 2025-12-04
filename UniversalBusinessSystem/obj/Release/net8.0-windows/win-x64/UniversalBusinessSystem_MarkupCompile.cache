@@ -1,0 +1,20 @@
+﻿UniversalBusinessSystem
+1.0.0.0
+
+winexe
+C#
+.cs
+F:\PROJECT MANAGEMET\UNIVERSALSOFTWARE\UNIVERSAL_SOFTWARE_3.0\UniversalBusinessSystem\obj\Release\net8.0-windows\win-x64\
+UniversalBusinessSystem
+none
+false
+TRACE;RELEASE;NET;NET8_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR_GREATER;NET7_0_OR_GREATER;NET8_0_OR_GREATER;NETCOREAPP3_0_OR_GREATER;NETCOREAPP3_1_OR_GREATER;WINDOWS7_0_OR_GREATER
+F:\PROJECT MANAGEMET\UNIVERSALSOFTWARE\UNIVERSAL_SOFTWARE_3.0\UniversalBusinessSystem\App.xaml
+7584279816
+
+22-501587637
+267-1157604816
+Views\DashboardView.xaml;Views\InventoryView.xaml;Views\LoginWindow.xaml;Views\MainWindow.xaml;Views\ModuleManagementView.xaml;Views\RegistrationWindow.xaml;Views\UserManagementView.xaml;
+
+False
+
