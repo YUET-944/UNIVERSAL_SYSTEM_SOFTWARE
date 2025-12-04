@@ -1,0 +1,12 @@
+F:\PROJECT MANAGEMET\UNIVERSALSOFTWARE\UNIVERSAL_SOFTWARE_3.0\UniversalBusinessSystem.Core\obj\Release\net8.0\UniversalBusinessSystem.Core.csproj.AssemblyReference.cache
+F:\PROJECT MANAGEMET\UNIVERSALSOFTWARE\UNIVERSAL_SOFTWARE_3.0\UniversalBusinessSystem.Core\obj\Release\net8.0\UniversalBusinessSystem.Core.GeneratedMSBuildEditorConfig.editorconfig
+F:\PROJECT MANAGEMET\UNIVERSALSOFTWARE\UNIVERSAL_SOFTWARE_3.0\UniversalBusinessSystem.Core\obj\Release\net8.0\UniversalBusinessSystem.Core.AssemblyInfoInputs.cache
+F:\PROJECT MANAGEMET\UNIVERSALSOFTWARE\UNIVERSAL_SOFTWARE_3.0\UniversalBusinessSystem.Core\obj\Release\net8.0\UniversalBusinessSystem.Core.AssemblyInfo.cs
+F:\PROJECT MANAGEMET\UNIVERSALSOFTWARE\UNIVERSAL_SOFTWARE_3.0\UniversalBusinessSystem.Core\obj\Release\net8.0\UniversalBusinessSystem.Core.csproj.CoreCompileInputs.cache
+F:\PROJECT MANAGEMET\UNIVERSALSOFTWARE\UNIVERSAL_SOFTWARE_3.0\UniversalBusinessSystem.Core\bin\Release\net8.0\UniversalBusinessSystem.Core.deps.json
+F:\PROJECT MANAGEMET\UNIVERSALSOFTWARE\UNIVERSAL_SOFTWARE_3.0\UniversalBusinessSystem.Core\bin\Release\net8.0\UniversalBusinessSystem.Core.dll
+F:\PROJECT MANAGEMET\UNIVERSALSOFTWARE\UNIVERSAL_SOFTWARE_3.0\UniversalBusinessSystem.Core\bin\Release\net8.0\UniversalBusinessSystem.Core.pdb
+F:\PROJECT MANAGEMET\UNIVERSALSOFTWARE\UNIVERSAL_SOFTWARE_3.0\UniversalBusinessSystem.Core\obj\Release\net8.0\UniversalBusinessSystem.Core.dll
+F:\PROJECT MANAGEMET\UNIVERSALSOFTWARE\UNIVERSAL_SOFTWARE_3.0\UniversalBusinessSystem.Core\obj\Release\net8.0\refint\UniversalBusinessSystem.Core.dll
+F:\PROJECT MANAGEMET\UNIVERSALSOFTWARE\UNIVERSAL_SOFTWARE_3.0\UniversalBusinessSystem.Core\obj\Release\net8.0\UniversalBusinessSystem.Core.pdb
+F:\PROJECT MANAGEMET\UNIVERSALSOFTWARE\UNIVERSAL_SOFTWARE_3.0\UniversalBusinessSystem.Core\obj\Release\net8.0\ref\UniversalBusinessSystem.Core.dll

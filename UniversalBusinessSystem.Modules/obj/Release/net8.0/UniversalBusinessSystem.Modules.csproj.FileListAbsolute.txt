@@ -1,0 +1,15 @@
+F:\PROJECT MANAGEMET\UNIVERSALSOFTWARE\UNIVERSAL_SOFTWARE_3.0\UniversalBusinessSystem.Modules\bin\Release\net8.0\UniversalBusinessSystem.Modules.deps.json
+F:\PROJECT MANAGEMET\UNIVERSALSOFTWARE\UNIVERSAL_SOFTWARE_3.0\UniversalBusinessSystem.Modules\bin\Release\net8.0\UniversalBusinessSystem.Modules.dll
+F:\PROJECT MANAGEMET\UNIVERSALSOFTWARE\UNIVERSAL_SOFTWARE_3.0\UniversalBusinessSystem.Modules\bin\Release\net8.0\UniversalBusinessSystem.Modules.pdb
+F:\PROJECT MANAGEMET\UNIVERSALSOFTWARE\UNIVERSAL_SOFTWARE_3.0\UniversalBusinessSystem.Modules\bin\Release\net8.0\UniversalBusinessSystem.Core.dll
+F:\PROJECT MANAGEMET\UNIVERSALSOFTWARE\UNIVERSAL_SOFTWARE_3.0\UniversalBusinessSystem.Modules\bin\Release\net8.0\UniversalBusinessSystem.Core.pdb
+F:\PROJECT MANAGEMET\UNIVERSALSOFTWARE\UNIVERSAL_SOFTWARE_3.0\UniversalBusinessSystem.Modules\obj\Release\net8.0\UniversalBusinessSystem.Modules.csproj.AssemblyReference.cache
+F:\PROJECT MANAGEMET\UNIVERSALSOFTWARE\UNIVERSAL_SOFTWARE_3.0\UniversalBusinessSystem.Modules\obj\Release\net8.0\UniversalBusinessSystem.Modules.GeneratedMSBuildEditorConfig.editorconfig
+F:\PROJECT MANAGEMET\UNIVERSALSOFTWARE\UNIVERSAL_SOFTWARE_3.0\UniversalBusinessSystem.Modules\obj\Release\net8.0\UniversalBusinessSystem.Modules.AssemblyInfoInputs.cache
+F:\PROJECT MANAGEMET\UNIVERSALSOFTWARE\UNIVERSAL_SOFTWARE_3.0\UniversalBusinessSystem.Modules\obj\Release\net8.0\UniversalBusinessSystem.Modules.AssemblyInfo.cs
+F:\PROJECT MANAGEMET\UNIVERSALSOFTWARE\UNIVERSAL_SOFTWARE_3.0\UniversalBusinessSystem.Modules\obj\Release\net8.0\UniversalBusinessSystem.Modules.csproj.CoreCompileInputs.cache
+F:\PROJECT MANAGEMET\UNIVERSALSOFTWARE\UNIVERSAL_SOFTWARE_3.0\UniversalBusinessSystem.Modules\obj\Release\net8.0\Universa.3A16B945.Up2Date
+F:\PROJECT MANAGEMET\UNIVERSALSOFTWARE\UNIVERSAL_SOFTWARE_3.0\UniversalBusinessSystem.Modules\obj\Release\net8.0\UniversalBusinessSystem.Modules.dll
+F:\PROJECT MANAGEMET\UNIVERSALSOFTWARE\UNIVERSAL_SOFTWARE_3.0\UniversalBusinessSystem.Modules\obj\Release\net8.0\refint\UniversalBusinessSystem.Modules.dll
+F:\PROJECT MANAGEMET\UNIVERSALSOFTWARE\UNIVERSAL_SOFTWARE_3.0\UniversalBusinessSystem.Modules\obj\Release\net8.0\UniversalBusinessSystem.Modules.pdb
+F:\PROJECT MANAGEMET\UNIVERSALSOFTWARE\UNIVERSAL_SOFTWARE_3.0\UniversalBusinessSystem.Modules\obj\Release\net8.0\ref\UniversalBusinessSystem.Modules.dll

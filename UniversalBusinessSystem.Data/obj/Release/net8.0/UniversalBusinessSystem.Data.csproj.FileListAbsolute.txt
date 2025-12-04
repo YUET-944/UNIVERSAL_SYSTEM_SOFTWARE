@@ -1,0 +1,17 @@
+F:\PROJECT MANAGEMET\UNIVERSALSOFTWARE\UNIVERSAL_SOFTWARE_3.0\UniversalBusinessSystem.Data\obj\Release\net8.0\UniversalBusinessSystem.Data.csproj.AssemblyReference.cache
+F:\PROJECT MANAGEMET\UNIVERSALSOFTWARE\UNIVERSAL_SOFTWARE_3.0\UniversalBusinessSystem.Data\obj\Release\net8.0\UniversalBusinessSystem.Data.GeneratedMSBuildEditorConfig.editorconfig
+F:\PROJECT MANAGEMET\UNIVERSALSOFTWARE\UNIVERSAL_SOFTWARE_3.0\UniversalBusinessSystem.Data\obj\Release\net8.0\UniversalBusinessSystem.Data.AssemblyInfoInputs.cache
+F:\PROJECT MANAGEMET\UNIVERSALSOFTWARE\UNIVERSAL_SOFTWARE_3.0\UniversalBusinessSystem.Data\obj\Release\net8.0\UniversalBusinessSystem.Data.AssemblyInfo.cs
+F:\PROJECT MANAGEMET\UNIVERSALSOFTWARE\UNIVERSAL_SOFTWARE_3.0\UniversalBusinessSystem.Data\obj\Release\net8.0\UniversalBusinessSystem.Data.csproj.CoreCompileInputs.cache
+F:\PROJECT MANAGEMET\UNIVERSALSOFTWARE\UNIVERSAL_SOFTWARE_3.0\UniversalBusinessSystem.Data\bin\Release\net8.0\UniversalBusinessSystem.Data.deps.json
+F:\PROJECT MANAGEMET\UNIVERSALSOFTWARE\UNIVERSAL_SOFTWARE_3.0\UniversalBusinessSystem.Data\bin\Release\net8.0\UniversalBusinessSystem.Data.runtimeconfig.json
+F:\PROJECT MANAGEMET\UNIVERSALSOFTWARE\UNIVERSAL_SOFTWARE_3.0\UniversalBusinessSystem.Data\bin\Release\net8.0\UniversalBusinessSystem.Data.dll
+F:\PROJECT MANAGEMET\UNIVERSALSOFTWARE\UNIVERSAL_SOFTWARE_3.0\UniversalBusinessSystem.Data\bin\Release\net8.0\UniversalBusinessSystem.Data.pdb
+F:\PROJECT MANAGEMET\UNIVERSALSOFTWARE\UNIVERSAL_SOFTWARE_3.0\UniversalBusinessSystem.Data\bin\Release\net8.0\UniversalBusinessSystem.Core.dll
+F:\PROJECT MANAGEMET\UNIVERSALSOFTWARE\UNIVERSAL_SOFTWARE_3.0\UniversalBusinessSystem.Data\bin\Release\net8.0\UniversalBusinessSystem.Core.pdb
+F:\PROJECT MANAGEMET\UNIVERSALSOFTWARE\UNIVERSAL_SOFTWARE_3.0\UniversalBusinessSystem.Data\obj\Release\net8.0\Universa.C3662FEF.Up2Date
+F:\PROJECT MANAGEMET\UNIVERSALSOFTWARE\UNIVERSAL_SOFTWARE_3.0\UniversalBusinessSystem.Data\obj\Release\net8.0\UniversalBusinessSystem.Data.dll
+F:\PROJECT MANAGEMET\UNIVERSALSOFTWARE\UNIVERSAL_SOFTWARE_3.0\UniversalBusinessSystem.Data\obj\Release\net8.0\refint\UniversalBusinessSystem.Data.dll
+F:\PROJECT MANAGEMET\UNIVERSALSOFTWARE\UNIVERSAL_SOFTWARE_3.0\UniversalBusinessSystem.Data\obj\Release\net8.0\UniversalBusinessSystem.Data.pdb
+F:\PROJECT MANAGEMET\UNIVERSALSOFTWARE\UNIVERSAL_SOFTWARE_3.0\UniversalBusinessSystem.Data\obj\Release\net8.0\UniversalBusinessSystem.Data.genruntimeconfig.cache
+F:\PROJECT MANAGEMET\UNIVERSALSOFTWARE\UNIVERSAL_SOFTWARE_3.0\UniversalBusinessSystem.Data\obj\Release\net8.0\ref\UniversalBusinessSystem.Data.dll
