@@ -1,0 +1,4 @@
+BuiltPdbOutput	F:\PROJECT MANAGEMET\UNIVERSALSOFTWARE\UNIVERSAL_SOFTWARE_3.0\Installer\obj\Release\UniversalBusinessSystemSetup.wixpdb
+BuiltTargetOutput	F:\PROJECT MANAGEMET\UNIVERSALSOFTWARE\UNIVERSAL_SOFTWARE_3.0\Installer\obj\Release\UniversalBusinessSystemSetup.msi
+Input	..\PublishedApp\UniversalBusinessSystem.exe
+Intermediate	F:\PROJECT MANAGEMET\UNIVERSALSOFTWARE\UNIVERSAL_SOFTWARE_3.0\Installer\obj\Release\#cab1.cab

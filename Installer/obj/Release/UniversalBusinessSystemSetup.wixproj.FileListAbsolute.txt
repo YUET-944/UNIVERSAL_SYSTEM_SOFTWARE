@@ -1,0 +1,6 @@
+F:\PROJECT MANAGEMET\UNIVERSALSOFTWARE\UNIVERSAL_SOFTWARE_3.0\Installer\obj\Release\UniversalBusinessSystemSetup.wixproj.CoreCompileInputs.cache
+F:\PROJECT MANAGEMET\UNIVERSALSOFTWARE\UNIVERSAL_SOFTWARE_3.0\Installer\obj\Release\UniversalBusinessSystemSetup.msi
+F:\PROJECT MANAGEMET\UNIVERSALSOFTWARE\UNIVERSAL_SOFTWARE_3.0\Installer\obj\Release\UniversalBusinessSystemSetup.wixpdb
+F:\PROJECT MANAGEMET\UNIVERSALSOFTWARE\UNIVERSAL_SOFTWARE_3.0\Installer\obj\Release\UniversalBusinessSystemSetup.wixproj.BindTracking-neutral.txt
+F:\PROJECT MANAGEMET\UNIVERSALSOFTWARE\UNIVERSAL_SOFTWARE_3.0\Installer\bin\Release\UniversalBusinessSystemSetup.msi
+F:\PROJECT MANAGEMET\UNIVERSALSOFTWARE\UNIVERSAL_SOFTWARE_3.0\Installer\bin\Release\UniversalBusinessSystemSetup.wixpdb
